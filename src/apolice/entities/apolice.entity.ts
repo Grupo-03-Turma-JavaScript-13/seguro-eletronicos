@@ -1,5 +1,5 @@
 import { Transform, TransformFnParams } from "class-transformer";
-import { IsNotEmpty, IsNumber, IsPositive, Length } from "class-validator";
+import { IsInt, IsNotEmpty, IsNumber, IsPositive, Length, Min } from "class-validator";
 import { Column, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { NumericTransformer } from "../../util/numerictransformer";
 
@@ -37,6 +37,11 @@ export class Apolice {
 
     @UpdateDateColumn()
     anoFabricacao: Date;
+    
+    @IsInt()
+    @Min(0)
+    @Column({type:"int",default:0})
+    anoAquisição:number;
 
     @IsNumber({ maxDecimalPlaces: 2 })
     @IsNotEmpty({ message: 'O Valor do Aparelho é Obrigatório.'})
