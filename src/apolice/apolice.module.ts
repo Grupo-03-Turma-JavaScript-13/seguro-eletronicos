@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ApoliceService } from './apolice.service';
-import { ApoliceController } from './apolice.controller';
+import { ApoliceController } from './controllers/apolice.controller';
 
 @Module({
   controllers: [ApoliceController],

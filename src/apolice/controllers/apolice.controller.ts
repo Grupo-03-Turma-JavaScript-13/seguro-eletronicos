@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { ApoliceService } from './apolice.service';
-import { Apolice } from './entities/apolice.entity';
+import { ApoliceService } from "../services/apolice.service"
+import { Apolice } from '../entities/apolice.entity';
 
 @Controller('apolice')
 export class ApoliceController {
