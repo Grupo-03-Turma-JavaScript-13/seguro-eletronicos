@@ -55,7 +55,11 @@ export class UsuarioService {
     async create(usuario: Usuario): Promise<Usuario> {
 
 
-        const buscaUsuario = await this.findByUsuario(usuario.usuario);
+        const buscaUsuario = await this.usuarioRepository.findOne({
+            where: {
+                usuario: usuario.usuario
+            }
+        });
 
 
         if (buscaUsuario)

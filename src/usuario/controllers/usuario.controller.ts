@@ -24,6 +24,13 @@ export class UsuarioController {
         return this.usuarioService.findById(id)
     }
 
+    // Rota para buscar um usuário pelo nome de usuário (e-mail)
+    @Get('buscarporusuario/:usuario')
+    @HttpCode(HttpStatus.OK)
+    findByUsuario(@Param('usuario') usuario: string): Promise<Usuario> {
+        return this.usuarioService.findByUsuario(usuario);
+    }
+
     // Rota para criar um novo usuário
     @Post('/cadastrar')
     @HttpCode(HttpStatus.CREATED)
