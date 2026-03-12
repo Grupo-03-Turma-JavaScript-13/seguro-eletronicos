@@ -1,13 +1,17 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ApoliceService } from './apolice.service';
+import { Apolice } from './entities/apolice.entity';
 
 @Controller('apolice')
 export class ApoliceController {
   constructor(private readonly apoliceService: ApoliceService) {}
 
   @Post()
-  create(@Body() createApoliceDto: CreateApoliceDto) {
-    return this.apoliceService.create(createApoliceDto);
+  create(@Body() apolice: Apolice
+) {
+    return this.apoliceService.create(apolice
+
+    );
   }
 
   @Get()
@@ -21,8 +25,9 @@ export class ApoliceController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateApoliceDto: UpdateApoliceDto) {
-    return this.apoliceService.update(+id, updateApoliceDto);
+  update(@Param('id') id: string, @Body() apolice: Apolice
+) {
+    return this.apoliceService.update(+id, apolice);
   }
 
   @Delete(':id')
