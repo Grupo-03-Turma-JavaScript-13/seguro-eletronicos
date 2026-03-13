@@ -223,6 +223,10 @@ Principais operações disponíveis:
 | GET    | /usuario      | Listar usuarios   |
 | PUT    | /usuario/:id  | Atualizar usuario |
 | DELETE | /usuario/:id  | Remover usuario   |
+| POST   | /apólice      | Criar apólice     |
+| GET    | /apólice      | Listar apólices   |
+| PUT    | /apólice/:id  | Atualizar apólices|
+| DELETE | /apólice/:id  | Remover apólice   |
 
 
 ---
@@ -234,7 +238,7 @@ Principais operações disponíveis:
 **POST**
 
 ```
-/usuarios
+localhost:4000/usuarios/cadastrar
 ```
 
 Body:
