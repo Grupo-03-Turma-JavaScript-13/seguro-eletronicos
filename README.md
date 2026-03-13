@@ -217,7 +217,7 @@ Principais operações disponíveis:
 | ------ | ------------- | ----------------- |
 | POST   | /cliente      | Criar cliente     |
 | GET    | /cliente      | Listar clientes   |
-| PUT    | /cliente/     | Atualizar cliente |
+| PUT    | /cliente     | Atualizar cliente |
 | DELETE | /cliente/:id  | Remover cliente   |
 | POST   | /cadastrar    | Criar usuario     |
 | GET    | /all          | Listar usuarios   |
