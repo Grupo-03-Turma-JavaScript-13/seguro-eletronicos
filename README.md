@@ -246,7 +246,7 @@ Body:
 {
   "nome": "João Silva",
   "email": "joao@email.com",
-  "senha": "123456",
+  "senha": "12345678",
   "dataNascimento": "2000-01-01"
 }
 ```
