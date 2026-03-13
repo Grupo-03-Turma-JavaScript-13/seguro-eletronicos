@@ -3,8 +3,6 @@ import { UsuarioService } from "../services/usuario.service";
 import { Usuario } from "../entities/usuario.entity";
 
 
-
-
 @Controller("/usuarios")
 export class UsuarioController {
 
@@ -25,7 +23,7 @@ export class UsuarioController {
     }
 
     // Rota para buscar um usuário pelo nome de usuário (e-mail)
-    @Get('buscarporusuario/:usuario')
+    @Get('buscar/:usuario')
     @HttpCode(HttpStatus.OK)
     findByUsuario(@Param('usuario') usuario: string): Promise<Usuario> {
         return this.usuarioService.findByUsuario(usuario);

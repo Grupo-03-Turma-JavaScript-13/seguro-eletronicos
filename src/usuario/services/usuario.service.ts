@@ -20,7 +20,8 @@ export class UsuarioService {
 
             where: {
                 usuario: usuario
-            }
+            },
+            relations:{apolices:true}
         });
 
         if (!resultado)
@@ -31,7 +32,8 @@ export class UsuarioService {
 
     // Método para buscar todos os usuários
     async findAll(): Promise<Usuario[]> {
-        return await this.usuarioRepository.find({});
+        return await this.usuarioRepository.find({
+            relations:{apolices:true}});
     }
 
 
@@ -42,6 +44,7 @@ export class UsuarioService {
             where: {
                 id
             },
+            relations:{apolices:true}
         });
 
         if (!usuario)
@@ -58,7 +61,8 @@ export class UsuarioService {
         const buscaUsuario = await this.usuarioRepository.findOne({
             where: {
                 usuario: usuario.usuario
-            }
+            },
+            relations:{apolices:true}
         });
 
 
