@@ -255,9 +255,9 @@ Este projeto foi desenvolvido com o objetivo de:
 
 ---
 
-# 👨‍💻 Autor
+# 👨‍💻 Autores
 
-**Josue Barreto Viegas**
+**Josue Barreto Viegas**, **Lívia Campos**, **Evelyn Lamarca**, **Matheus Moura Bastos**, **Erick Santana**, **Renan Ferreira**
 
 Desenvolvedor focado em **Backend com Node.js, NestJS e TypeScript**.
 
