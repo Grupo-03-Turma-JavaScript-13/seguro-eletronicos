@@ -4,6 +4,8 @@ import { ClienteModule } from './cliente/cliente.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Apolice } from './apolice/entities/apolice.entity';
 import { Cliente } from './cliente/entities/cliente.entity';
+import { UsuarioModule } from './usuario/usuario.module';
+import { Usuario } from './usuario/entities/usuario.entity';
 
 @Module({
   imports: [
@@ -14,12 +16,13 @@ import { Cliente } from './cliente/entities/cliente.entity';
       username: 'root',
       password: 'root',
       database: 'db_seguro_eletronicos',
-      entities: [Cliente, Apolice],
+      entities: [Cliente, Apolice, Usuario],
       synchronize: true,
       //logging: true,
     }),
     ClienteModule,
-    ApoliceModule
+    ApoliceModule,
+    UsuarioModule
   ],
   controllers: [],
   providers: [],
