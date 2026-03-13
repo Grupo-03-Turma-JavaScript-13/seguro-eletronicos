@@ -64,8 +64,8 @@ export class Apolice {
 
     @IsOptional()
     @IsInt()
-    @Min(0)
-    @Column({ type: 'int', default: 0 })
+    @Min(1990)
+    @Column({ type: 'int', default: 1990 })
     anoAquisicao: number;
 
     @IsNumber({ maxDecimalPlaces: 2 })

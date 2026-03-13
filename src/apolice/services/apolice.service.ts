@@ -91,7 +91,6 @@ export class ApoliceService {
     else await this.usuarioService.findById(apolice.usuario.id);
 
     calcularDesconto(apolice);
-    apolice.valorFinal = apoliceBanco.valorFinal;
     return await this.apoliceRepository.save(apolice);
   }
 
@@ -144,6 +143,7 @@ export class ApoliceService {
 }
 
 function calcularDesconto(apolice: Apolice): void {
+  
   const anoAtual = new Date().getFullYear();
   const anosDeUso = anoAtual - apolice.anoAquisicao;
   if (anosDeUso > 3) {
