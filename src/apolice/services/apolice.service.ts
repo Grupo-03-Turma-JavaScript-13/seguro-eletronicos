@@ -50,14 +50,13 @@ export class ApoliceService {
     if  (!apolice.id || apolice.id <=0)
       throw new HttpException(' O ID da apolice é invalido!', HttpStatus.NOT_FOUND)
 
-    await this.findById(apolice.id)
+    const apoliceBanco = await this.findById(apolice.id)
     
     // if(!apolice.cliente) throw new HttpException('Os dados do cliente não foram encontrados.', HttpStatus.BAD_REQUEST)
 
     // await this.clienteRepository.findById(apolice.cliente.id)
-
     calcularDesconto(apolice)
-
+    apolice.valorFinal = apoliceBanco.valorFinal;
     return await this.apoliceRepository.save(apolice);
   }
 
@@ -98,11 +97,11 @@ export class ApoliceService {
 }
  function calcularDesconto(apolice:Apolice):void { 
     const anoAtual=new Date().getFullYear()
-    const anosDeUso=anoAtual-apolice.anoAquisição
+    const anosDeUso=anoAtual-apolice.anoAquisicao
     if (anosDeUso > 3) {
       apolice.valorDesconto = apolice.valorBase * 0.3
     } else {
       apolice.valorDesconto = 0
     }
-    apolice.valorFinal = apolice.valorBase - apolice.valorDesconto 
+    apolice.valorFinal = apolice.valorBase - apolice.valorDesconto
   }

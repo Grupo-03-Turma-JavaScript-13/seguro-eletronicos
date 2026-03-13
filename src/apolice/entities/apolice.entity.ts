@@ -39,11 +39,12 @@ export class Apolice {
 	@Min(0)
     @Column({ type: "int", default: 0 })
     anoFabricacao: number;
-
+    
+	@IsOptional()
     @IsInt()
     @Min(0)
     @Column({type:"int",default:0})
-    anoAquisição:number;
+    anoAquisicao:number;
 
     @IsNumber({ maxDecimalPlaces: 2 })
     @IsNotEmpty({ message: 'O Valor do Aparelho é Obrigatório.'})
@@ -54,7 +55,6 @@ export class Apolice {
 
     @IsNumber({ maxDecimalPlaces: 2 })
     @IsNotEmpty({ message: 'O Valor do Desconto é Obrigatório.'})
-    @IsPositive()
     @Column({ type: "decimal", precision: 10, scale: 2, transformer: new NumericTransformer() })
     valorDesconto: number;
 
