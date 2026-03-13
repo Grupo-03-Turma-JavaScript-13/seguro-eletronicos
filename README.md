@@ -155,7 +155,7 @@ git git@github.com:Grupo-03-Turma-JavaScript-13/seguro-eletronicos.git
 ## 2️⃣ Acessar a pasta
 
 ```bash
-cd seguro-eletronicos-api
+cd seguro-eletronicos
 ```
 
 ---
