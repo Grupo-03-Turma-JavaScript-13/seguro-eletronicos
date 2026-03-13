@@ -1,5 +1,5 @@
 import { Transform, TransformFnParams } from "class-transformer";
-import { IsInt, IsNotEmpty, IsNumber, IsPositive, Length, Min } from "class-validator";
+import { IsDateString, IsInt, IsNotEmpty, IsNumber, IsOptional, IsPositive, Length, Min } from "class-validator";
 import { Column, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { NumericTransformer } from "../../util/numerictransformer";
 
@@ -34,10 +34,12 @@ export class Apolice {
     @Column({ length: 20, nullable: false })
     numeroSerie: string;
 
+	@IsOptional()
+	@IsInt()
+	@Min(0)
+    @Column({ type: "int", default: 0 })
+    anoFabricacao: number;
 
-    @UpdateDateColumn()
-    anoFabricacao: Date;
-    
     @IsInt()
     @Min(0)
     @Column({type:"int",default:0})
@@ -62,10 +64,12 @@ export class Apolice {
     @Column({ type: "decimal", precision: 10, scale: 2, transformer: new NumericTransformer() })
     valorFinal: number;
 
-    @UpdateDateColumn()
+	@IsDateString()
+    @Column({ type: "timestamp", precision: 3, nullable: false })
     dataInicio: Date;
 
-    @UpdateDateColumn()
+	@IsDateString()
+    @Column({ type: "timestamp", precision: 3, nullable: false })
     dataFim: Date;
 
 
