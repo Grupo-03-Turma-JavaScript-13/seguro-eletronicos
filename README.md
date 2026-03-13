@@ -269,7 +269,6 @@ Este projeto foi desenvolvido com o objetivo de:
 
 **Josue Viegas**, **Lívia Campos**, **Evelyn Lamarca**, **Matheus Moura**, **Erick Santana**, **Renan Ferreira**
 
-Desenvolvedor focado em **Backend com Node.js, NestJS e TypeScript**.
 
 ---
 
