@@ -92,7 +92,7 @@ Cada módulo segue o padrão:
 
 Responsável pelo acesso ao sistema.
 
-Campos principais:
+Estrutura Usuario:
 
 * id
 * nome
@@ -106,7 +106,7 @@ Campos principais:
 
 Pessoa que contrata o seguro.
 
-Campos principais:
+Estrutura Cliente:
 
 * id
 * nome
@@ -123,7 +123,7 @@ Campos principais:
 
 Registro do seguro contratado.
 
-Campos principais:
+Estrutura Apólice:
 
 * id
 * tipoDispositivo
