@@ -1,98 +1,268 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 📱 Seguro de Produtos Eletrônicos API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![Node](https://img.shields.io/badge/Node.js-20-green)
+![NestJS](https://img.shields.io/badge/NestJS-Framework-red)
+![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![TypeORM](https://img.shields.io/badge/TypeORM-ORM-lightgrey)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+# 📌 Sobre o Projeto
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A **Seguro de Produtos Eletrônicos API** é uma aplicação backend desenvolvida para gerenciar seguros de dispositivos eletrônicos como:
 
-## Project setup
+* 📱 Celulares
+* 💻 Notebooks
+* 📟 Tablets
+* 🎧 Outros dispositivos eletrônicos
 
-```bash
-$ npm install
+A API permite o gerenciamento completo de:
+
+* 👤 **Usuários do sistema**
+* 👥 **Clientes**
+* 📄 **Apólices de seguro**
+
+O projeto foi desenvolvido com foco em **boas práticas de arquitetura backend**, utilizando **NestJS**, **TypeORM** e **MySQL**, garantindo organização modular, escalabilidade e manutenção simplificada.
+
+---
+
+# 🚀 Tecnologias Utilizadas
+
+| Tecnologia      | Descrição                        |
+| --------------- | -------------------------------- |
+| Node.js         | Ambiente de execução JavaScript  |
+| TypeScript      | Tipagem estática para JavaScript |
+| NestJS          | Framework backend estruturado    |
+| TypeORM         | ORM para comunicação com banco   |
+| MySQL           | Banco de dados relacional        |
+| MySQL Workbench | Gerenciamento do banco           |
+| Insomnia        | Teste de requisições HTTP        |
+
+---
+
+# 🏗️ Arquitetura do Projeto
+
+O projeto segue a arquitetura **modular do NestJS**.
+
+```
+src
+│
+├── apolice
+│   ├── dto
+│   ├── entities
+│   ├── apolice.controller.ts
+│   ├── apolice.service.ts
+│   └── apolice.module.ts
+│
+├── cliente
+│   ├── dto
+│   ├── entities
+│   ├── cliente.controller.ts
+│   ├── cliente.service.ts
+│   └── cliente.module.ts
+│
+├── usuario
+│   ├── dto
+│   ├── entities
+│   ├── usuario.controller.ts
+│   ├── usuario.service.ts
+│   └── usuario.module.ts
+│
+├── auth
+│
+├── app.module.ts
+└── main.ts
 ```
 
-## Compile and run the project
+### Estrutura dos Módulos
+
+Cada módulo segue o padrão:
+
+* **Controller** → gerencia as rotas da API
+* **Service** → regras de negócio
+* **Entity** → estrutura da tabela no banco
+* **DTO** → validação e transferência de dados
+
+---
+
+# 🗄️ Estrutura do Banco de Dados
+
+## 👤 Usuário
+
+Responsável pelo acesso ao sistema.
+
+Campos principais:
+
+* id
+* nome
+* email
+* senha
+* data_nascimento
+* foto
+
+---
+
+## 👥 Cliente
+
+Pessoa que contrata o seguro.
+
+Campos principais:
+
+* id
+* nome
+* cpf
+* telefone
+* email
+* endereco
+
+---
+
+## 📄 Apólice
+
+Registro do seguro contratado.
+
+Campos principais:
+
+* id
+* numero_apolice
+* produto
+* marca
+* modelo
+* valor_produto
+* valor_seguro
+* data_inicio
+* data_fim
+* cliente
+
+---
+
+# ⚙️ Instalação do Projeto
+
+## 1️⃣ Clonar o repositório
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/seu-usuario/seguro-eletronicos-api.git
 ```
 
-## Run tests
+---
+
+## 2️⃣ Acessar a pasta
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+cd seguro-eletronicos-api
 ```
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## 3️⃣ Instalar dependências
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+## 4️⃣ Configurar o Banco de Dados
 
-Check out a few resources that may come in handy when working with NestJS:
+Crie um banco no **MySQL Workbench**:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```
+db_seguro_eletronicos
+```
 
-## Support
+Configure o arquivo `.env`:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```
+DB_HOST=localhost
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=senha
+DB_DATABASE=db_seguro_eletronicos
+```
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 5️⃣ Executar o projeto
 
-## License
+Modo desenvolvimento:
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```bash
+npm run start:dev
+```
+
+Servidor:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🧪 Testando a API
+
+As rotas podem ser testadas utilizando:
+
+* **Insomnia**
+* **Postman**
+
+Principais operações disponíveis:
+
+| Método | Endpoint      | Descrição         |
+| ------ | ------------- | ----------------- |
+| POST   | /usuarios     | Criar usuário     |
+| GET    | /usuarios     | Listar usuários   |
+| PUT    | /usuarios/:id | Atualizar usuário |
+| DELETE | /usuarios/:id | Remover usuário   |
+| POST   | /clientes     | Criar cliente     |
+| POST   | /apolices     | Criar apólice     |
+
+---
+
+# 📬 Exemplo de Requisição
+
+### Criar usuário
+
+**POST**
+
+```
+/usuarios
+```
+
+Body:
+
+```json
+{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "senha": "123456",
+  "dataNascimento": "2000-01-01"
+}
+```
+
+---
+
+# 🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido com o objetivo de:
+
+* Praticar **NestJS**
+* Utilizar **TypeORM com MySQL**
+* Criar **APIs REST escaláveis**
+* Implementar **CRUD completo**
+* Trabalhar com **arquitetura modular**
+
+---
+
+# 👨‍💻 Autor
+
+**Josue Barreto Viegas**
+
+Desenvolvedor focado em **Backend com Node.js, NestJS e TypeScript**.
+
+---
+
+# 📄 Licença
+
+Este projeto é destinado a **fins educacionais e portfólio**.
