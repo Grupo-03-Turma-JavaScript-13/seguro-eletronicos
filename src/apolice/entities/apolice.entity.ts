@@ -79,8 +79,7 @@ export class Apolice {
     })
     valorBase: number;
 
-    @IsNumber({ maxDecimalPlaces: 2 })
-    @IsNotEmpty({ message: 'O Valor do Desconto é Obrigatório.' })
+
     @Column({
         type: 'decimal',
         precision: 10,
@@ -89,9 +88,6 @@ export class Apolice {
     })
     valorDesconto: number;
 
-    @IsNumber({ maxDecimalPlaces: 2 })
-    @IsNotEmpty({ message: 'O Valor final é Obrigatório.' })
-    @IsPositive()
     @Column({
         type: 'decimal',
         precision: 10,
