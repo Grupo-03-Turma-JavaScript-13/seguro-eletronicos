@@ -11,7 +11,7 @@
 
 # 📌 Sobre o Projeto
 
-A **API da RIver Tecnology** é uma aplicação backend desenvolvida para gerenciar seguros de dispositivos eletrônicos como:
+A API **River Guard** é uma aplicação backend desenvolvida para gerenciar seguros de dispositivos eletrônicos como:
 
 * 📱 Celulares
 * 💻 Notebooks
