@@ -217,15 +217,14 @@ Principais operações disponíveis:
 | ------ | ------------- | ----------------- |
 | POST   | /cliente      | Criar cliente     |
 | GET    | /cliente      | Listar clientes   |
-| PUT    | /cliente/:id  | Atualizar cliente |
+| PUT    | /cliente/     | Atualizar cliente |
 | DELETE | /cliente/:id  | Remover cliente   |
-| POST   | /usuario      | Criar usuario     |
-| GET    | /usuario      | Listar usuarios   |
-| PUT    | /usuario/:id  | Atualizar usuario |
-| DELETE | /usuario/:id  | Remover usuario   |
+| POST   | /cadastrar    | Criar usuario     |
+| GET    | /all          | Listar usuarios   |
+| PUT    | /atualizar    | Atualizar usuario |
 | POST   | /apólice      | Criar apólice     |
 | GET    | /apólice      | Listar apólices   |
-| PUT    | /apólice/:id  | Atualizar apólices|
+| PUT    | /apólice      | Atualizar apólices|
 | DELETE | /apólice/:id  | Remover apólice   |
 
 
