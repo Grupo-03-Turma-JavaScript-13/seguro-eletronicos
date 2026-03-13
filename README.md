@@ -211,21 +211,26 @@ As rotas podem ser testadas utilizando:
 * **Insomnia**
 * **Postman**
 
-Principais operações disponíveis:
+Operações disponíveis:
 
-| Método | Endpoint      | Descrição         |
-| ------ | ------------- | ----------------- |
-| POST   | /cliente      | Criar cliente     |
-| GET    | /cliente      | Listar clientes   |
-| PUT    | /cliente     | Atualizar cliente |
-| DELETE | /cliente/:id  | Remover cliente   |
-| POST   | /cadastrar    | Criar usuario     |
-| GET    | /all          | Listar usuarios   |
-| PUT    | /atualizar    | Atualizar usuario |
-| POST   | /apólice      | Criar apólice     |
-| GET    | /apólice      | Listar apólices   |
-| PUT    | /apólice      | Atualizar apólices|
-| DELETE | /apólice/:id  | Remover apólice   |
+| Método | Endpoint             | Descrição                    |
+| ------ | ---------------------| -----------------------------|
+| POST   | /cliente             | Criar cliente                |
+| GET    | /cliente             | Listar clientes              |
+| GET    | cliente/buscarcpf    | Busca Clientes por CPF       |
+| GET    | cliente/buscarnome   | Busca Clientes por Nome      |
+| PUT    | /cliente             | Atualizar cliente            |
+| DELETE | /cliente/:id         | Remover cliente              |
+| POST   | usuario/cadastrar    | Criar usuario                |
+| GET    | usuario/all          | Listar usuarios              |
+| GET    | usuario              | Listar usuarios ID           |
+| PUT    | usuario/atualizar    | Atualizar usuario            |
+| POST   | /apólice             | Criar apólice                |
+| GET    | /apólice             | Listar apólices              |
+| PUT    | /apólice             | Atualizar apólices           |
+| DELETE | /apólice/:id         | Remover apólice              |
+| GET    | /apólice/buscar      | Busca por Faixa de Valor     |
+| GET    | /apólice/dispositivos| Busca por Tipo de Dispositivo|
 
 
 ---
