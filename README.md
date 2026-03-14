@@ -217,13 +217,13 @@ Operações disponíveis:
 | ------ | ---------------------| -----------------------------|
 | POST   | /cliente             | Criar cliente                |
 | GET    | /cliente             | Listar clientes              |
-| GET    | cliente/buscarcpf    | Busca Clientes por CPF       |
-| GET    | cliente/buscarnome   | Busca Clientes por Nome      |
+| GET    | /cliente/buscarcpf   | Busca Clientes por CPF       |
+| GET    | /cliente/buscarnome  | Busca Clientes por Nome      |
 | PUT    | /cliente             | Atualizar cliente            |
 | DELETE | /cliente/:id         | Remover cliente              |
-| POST   | usuario/cadastrar    | Criar usuario                |
-| GET    | usuario/all          | Listar usuarios              |
-| GET    | usuario              | Listar usuarios ID           |
+| POST   | /usuario/cadastrar   | Criar usuario                |
+| GET    | /usuario/all         | Listar usuarios              |
+| GET    | /usuario             | Listar usuarios por ID       |
 | PUT    | usuario/atualizar    | Atualizar usuario            |
 | POST   | /apólice             | Criar apólice                |
 | GET    | /apólice             | Listar apólices              |
