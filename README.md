@@ -224,7 +224,7 @@ Operações disponíveis:
 | POST   | /usuario/cadastrar   | Criar usuario                |
 | GET    | /usuario/all         | Listar usuarios              |
 | GET    | /usuario             | Listar usuarios por ID       |
-| PUT    | usuario/atualizar    | Atualizar usuario            |
+| PUT    | /usuario/atualizar    | Atualizar usuario            |
 | POST   | /apolice             | Criar apólice                |
 | GET    | /apolice             | Listar apólices              |
 | PUT    | /apolice             | Atualizar apólices           |
