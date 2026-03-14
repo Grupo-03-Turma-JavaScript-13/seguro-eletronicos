@@ -213,24 +213,24 @@ As rotas podem ser testadas utilizando:
 
 Operações disponíveis:
 
-| Método | Endpoint             | Descrição                    |
-| ------ | ---------------------| -----------------------------|
-| POST   | /cliente             | Criar cliente                |
-| GET    | /cliente             | Listar clientes              |
-| GET    | /cliente/buscarcpf   | Busca Clientes por CPF       |
-| GET    | /cliente/buscarnome  | Busca Clientes por Nome      |
-| PUT    | /cliente             | Atualizar cliente            |
-| DELETE | /cliente/:id         | Remover cliente              |
-| POST   | /usuario/cadastrar   | Criar usuario                |
-| GET    | /usuario/all         | Listar usuarios              |
-| GET    | /usuario             | Listar usuarios por ID       |
-| PUT    | /usuario/atualizar    | Atualizar usuario            |
-| POST   | /apolice             | Criar apólice                |
-| GET    | /apolice             | Listar apólices              |
-| PUT    | /apolice             | Atualizar apólices           |
-| DELETE | /apolice/:id         | Remover apólice              |
-| GET    | /apolice/buscar      | Busca por Faixa de Valor     |
-| GET    | /apolice/dispositivos| Busca por Tipo de Dispositivo|
+| Método | Endpoint              | Descrição                    |
+| ------ | --------------------- |------------------------------|
+| POST   | /clientes             | Criar cliente                |
+| GET    | /clientes             | Listar clientes              |
+| GET    | /clientes/buscarcpf   | Busca Clientes por CPF       |
+| GET    | /clientes/buscarnome  | Busca Clientes por Nome      |
+| PUT    | /clientes             | Atualizar cliente            |
+| DELETE | /clientes/:id         | Remover cliente              |
+| POST   | /usuarios/cadastrar   | Criar usuario                |
+| GET    | /usuarios/all         | Listar usuarios              |
+| GET    | /usuarios             | Listar usuarios por ID       |
+| PUT    | /usuarios/atualizar   | Atualizar usuario            |
+| POST   | /apolices             | Criar apólice                |
+| GET    | /apolices             | Listar apólices              |
+| PUT    | /apolices             | Atualizar apólices           |
+| DELETE | /apolices/:id         | Remover apólice              |
+| GET    | /apolices/buscar      | Busca por Faixa de Valor     |
+| GET    | /apolices/dispositivos| Busca por Tipo de Dispositivo|
 
 
 ---
