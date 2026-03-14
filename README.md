@@ -225,12 +225,12 @@ Operações disponíveis:
 | GET    | /usuario/all         | Listar usuarios              |
 | GET    | /usuario             | Listar usuarios por ID       |
 | PUT    | usuario/atualizar    | Atualizar usuario            |
-| POST   | /apólice             | Criar apólice                |
-| GET    | /apólice             | Listar apólices              |
-| PUT    | /apólice             | Atualizar apólices           |
-| DELETE | /apólice/:id         | Remover apólice              |
-| GET    | /apólice/buscar      | Busca por Faixa de Valor     |
-| GET    | /apólice/dispositivos| Busca por Tipo de Dispositivo|
+| POST   | /apolice             | Criar apólice                |
+| GET    | /apolice             | Listar apólices              |
+| PUT    | /apolice             | Atualizar apólices           |
+| DELETE | /apolice/:id         | Remover apólice              |
+| GET    | /apolice/buscar      | Busca por Faixa de Valor     |
+| GET    | /apolice/dispositivos| Busca por Tipo de Dispositivo|
 
 
 ---
