@@ -1,7 +1,9 @@
 import { Controller, Get, Post, Body, Patch, Param,Query, Delete, HttpCode, HttpStatus, ParseIntPipe, Put } from '@nestjs/common';
 import { ApoliceService } from "../services/apolice.service"
 import { Apolice } from '../entities/apolice.entity';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Apolice')
 @Controller('/apolices')
 export class ApoliceController {
   constructor(private readonly apoliceService: ApoliceService) {}

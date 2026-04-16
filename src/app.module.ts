@@ -6,25 +6,33 @@ import { Apolice } from './apolice/entities/apolice.entity';
 import { Cliente } from './cliente/entities/cliente.entity';
 import { UsuarioModule } from './usuario/usuario.module';
 import { Usuario } from './usuario/entities/usuario.entity';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'db_seguro_eletronicos',
+      type: 'postgres',
+      url: process.env.DATABASE_URL,
+      ssl: true,
       entities: [Cliente, Apolice, Usuario],
+      autoLoadEntities: false,
       synchronize: true,
-      //logging: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+        // Configurações otimizadas para Neon
+        max: 1,
+        connectionTimeoutMillis: 0,
+        idleTimeoutMillis: 30000,
+      },
+      logging: true,
     }),
     ClienteModule,
     ApoliceModule,
     UsuarioModule
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
