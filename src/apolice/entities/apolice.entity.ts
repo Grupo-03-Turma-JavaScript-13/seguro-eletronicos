@@ -98,6 +98,7 @@ export class Apolice {
         scale: 2,
         transformer: new NumericTransformer(),
     })
+    @IsOptional()
     valorDesconto: number;
     
     @ApiProperty()
@@ -107,6 +108,7 @@ export class Apolice {
         scale: 2,
         transformer: new NumericTransformer(),
     })
+    @IsOptional()
     valorFinal: number;
     
     @ApiProperty()
