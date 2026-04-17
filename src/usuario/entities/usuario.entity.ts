@@ -37,11 +37,6 @@ export class Usuario {
     usuario: string
     //admin@gmail.com
     
-    @ApiProperty()
-    @Column({ length: 500, nullable: true, default: 'https://ik.imagekit.io/leu4crxxao/games/istockphoto-2041572395-612x612.jpg' })
-    @IsString({ message: "Foto precisa ser uma string" })
-    foto: string
-    //https://ik.imagekit.io/ntap4bpdo/di%20estefano.PES.PNG
 
     @Type(() => Apolice)
     @OneToMany(() => Apolice, (apolice) => apolice.usuario)
