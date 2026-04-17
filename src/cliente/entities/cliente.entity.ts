@@ -25,12 +25,6 @@ export class Cliente {
   @Column({ type: 'varchar', length: 255, nullable: false })
   email: string;
   
-  @ApiProperty()
-  @Transform(({ value }: TransformFnParams) => value?.trim())
-  @MinLength(8,{message:"Senha precia ser com minimo de 8 caracteres"})
-  @IsNotEmpty({message:"Senha não pode ser vazio"})
-  @Column({ type: 'varchar', length: 50, nullable: false })
-  senha: string;
   
   @ApiProperty()
   @IsNotEmpty({message:"Data de Nascimento não pode ser vazia"})
@@ -53,14 +47,6 @@ export class Cliente {
   @Column({ type: 'varchar', length: 11, nullable: false })
   telefone: string;
   
-  @ApiProperty()
-  @Column({
-    type: 'varchar',
-    length: 500,
-    default: 'https://ik.imagekit.io/leu4crxxao/games/istockphoto-2041572395-612x612.jpg'
-  })
-  @IsString({message:"Foto precisa ser uma string"})
-  foto: string;
   
   @Type(() => Apolice)
   @OneToMany(() => Apolice, (apolice) => apolice.cliente)
